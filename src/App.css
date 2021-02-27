@@ -1,23 +1,51 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+body {
   text-align: center;
-  background-color: #282c34;
   margin: 0 auto;
-  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
 }
 
 .carousel-container {
   display: flex;
-  height: 350px;
+  background-color: antiquewhite;
   width: 100%;
+  position: absolute;
 }
 
-.item {
-  margin: 1em;
-  background-color: ivory;
-  padding: 10px 40px;
-}
-
-.image {
-  clip-path: circle(50% at 50% 50%);
+img {
+  border-radius: 50%;
   height: 100px;
+  margin-top: -6em;
+}
+
+.card {
+  margin: 5em 2em 3em;
+  background-color: ivory;
+  padding: 2em;
+  width: 500px;
+  height: 200px;
+  flex: 1; /* each card is of equal size */
+  box-shadow: 6px 6px 17px 1px rgba(0, 0, 0, 0.36);
+  -webkit-box-shadow: 6px 6px 17px 1px rgba(0, 0, 0, 0.36);
+  /* transition: height 1s, width 1s, left 1s, margin-top 1s, line-height 1s, background-color 1s; */
+}
+
+.left {
+  margin-right: -15em;
+  margin-top: 6em;
+}
+
+.right {
+  margin-left: -15em;
+  margin-top: 6em;
+}
+
+.active {
+  z-index: 1;
+  height: 250px;
+}
+
+.arrow-left svg path {
+  fill: red;
 }
