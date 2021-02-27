@@ -10,6 +10,11 @@ React component to showcase client/customer testimonials.
 file-loader
 React-DOM
 
+### Attributions
+
+Quote Icons made by Freepik from www.flaticon.com
+All other icons from FontAwesome.com
+
 ## Available Scripts
 
 In the project directory, you can run:
