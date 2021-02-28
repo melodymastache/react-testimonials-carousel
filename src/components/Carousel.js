@@ -21,16 +21,16 @@ class Carousel extends React.Component {
                     <div className="card active">
                         <img className="avatars" src="https://placedog.net/350/350" alt="avatar"></img>
                         <div className="text">
-                            <Quote className="quotes quote-left" fill="red"></Quote>
+                            <Quote className="quotes quote-left" fill="hsla(221, 0%, 88%, 0.81)"></Quote>
                             <h3 className="name">Hammy</h3>
                             <i className="position">Lunchtime Leader</i>
                             <p className="testimony">Woof woof woof woof woof woof woof. Woof woof woof. Woof woof woof woof! Woof. Woof woof woof woof woof woof woof woof. Woof woof. Woof woof woof. Woof woof woof woof woof woof woof woof. Woof Woof woof. Woof woof woof. Woof!</p>
 
                             <div class="arrow-container">
-                                <ArrowLeft className="arrow arrow-left" fill="hsla(316, 0%, 62%, 0.89)"></ArrowLeft>
-                                <ArrowRight className="arrow arrow-right" fill="red"></ArrowRight>
+                                <ArrowLeft className="arrow arrow-left" fill="hsla(221, 0%, 49%, 0.98)"></ArrowLeft>
+                                <ArrowRight className="arrow arrow-right" fill="hsla(221, 0%, 49%, 0.98)"></ArrowRight>
                             </div>
-                            <Quote className="quotes quote-right" fill="grey"> </Quote>
+                            <Quote className="quotes quote-right" fill="hsla(221, 0%, 88%, 0.81)"> </Quote>
                         </div>
                     </div>
                     <div className="card right">
