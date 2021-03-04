@@ -89,3 +89,10 @@ p {
   transform: rotate(180deg);
   margin-top: 3em;
 }
+
+.tracker {
+  z-index: 1;
+  height: 2px;
+  padding: 5px; 
+  margin-bottom: 1.5em;
+}

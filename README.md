@@ -14,4 +14,6 @@ React-DOM
 
 Quote Icons made by Freepik from www.flaticon.com
 
-All other icons from FontAwesome.com
+All other icons from FontAwesome.
+
+This project was coded with React.
