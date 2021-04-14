@@ -1,6 +1,6 @@
 export const items = [
     {
-        status: "active",
+        status: "inactive",
         imgSrc: "https://placedog.net/250/250",
         name: "Spot",
         position: "Hide and Seek Master",
@@ -21,7 +21,7 @@ export const items = [
         quote: "Woof woof woof woof woof woof woof woof. Woof Woof woof. Woof woof woof. Woof woof woof woof woof woof woof woof. Woof Woof woof. Woof woof woof. Woof!"
     },
     {
-        status: "inactive",
+        status: "active",
         imgSrc: "https://placedog.net/450/450",
         name: "Sniffer",
         position: "Guide Dog",
