@@ -1,20 +1,20 @@
 export const items = [
     {
-        status: "left",
+        status: "active",
         imgSrc: "https://placedog.net/250/250",
         name: "Spot",
         position: "Hide and Seek Master",
         quote: "Woof. Woof woof woof woof woof. Woof woof! Woof. Woof. Woof woof woof woof woof. Woof woof! Woof. Woof. Woof woof woof woof woof. Woof woof! Woof."
     },
     {
-        status: "active",
+        status: "inactive",
         imgSrc: "https://placedog.net/350/350",
         name: "Hammy",
         position: "Lunchtime Leader", 
         quote: "Woof woof woof woof woof woof woof. Woof woof woof. Woof woof woof woof! Woof. Woof woof woof woof woof woof woof woof. Woof woof. Woof woof woof. Woof woof woof woof woof woof woof woof. Woof Woof woof. Woof woof woof. Woof!"
     },
     {
-        status: "right",
+        status: "inactive",
         imgSrc: "https://placedog.net/300/300",
         name: "Mario",
         position: "Professional Hero",
