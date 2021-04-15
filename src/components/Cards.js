@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Carousel.css';
 import { items } from './Data';
 import { ReactComponent as ArrowLeft } from '../assets/chevron-left-solid.svg';
@@ -14,10 +14,9 @@ class Cards extends React.Component {
             rightCard: 0,
             arrayLength: 0
         };
-        this.getLength = this.getLength.bind();
-        this.activatePreviousSlide = this.activatePreviousSlide.bind();
-        this.activateNextSlide = this.activateNextSlide.bind();
-        this.resetArray = this.resetArray.bind();
+        this.getLength = this.getLength.bind(this);
+        this.activatePreviousSlide = this.activatePreviousSlide.bind(this);
+        this.activateNextSlide = this.activateNextSlide.bind(this);
     }
     componentDidMount() { // gets index of active card from imported data and sets state
         let length = this.getLength();
@@ -40,29 +39,29 @@ class Cards extends React.Component {
         }
         return length;
     }
-    atEndOfArray(currentActiveIndex, endOfArray) {
-        return currentActiveIndex === endOfArray ? true : false;
+    activatePreviousSlide(currentActiveIndex) {
+        let left = this.state.leftCard;
+        let active = this.state.activeIndex;
+        let right = this.state.rightCard;
+        console.log('Left: ' + left + '\nActive: ' + active + '\nRight: ' + right);
+        if (left - 1 === 0) { // if left card is first in array
+            this.setState({
+                leftCard: this.state.length - 1,
+                activeIndex: active - 1,
+                rightCard: right - 1
+            })
+        }
+        else {
+            this.setState({
+                leftCard: currentActiveIndex - 2,
+                activeIndex: currentActiveIndex - 1,
+                rightCard: currentActiveIndex,
+            }, () => { console.log(this.state); });
+        }
     }
-    resetArray() {
-        this.setState({
-            leftCard: null,
-            activeIndex: 0,
-            rightCard: 1
-        })
-    }
-    activatePreviousSlide(currentActiveIndex, endOfArray) {
-        console.log('current index: ' + currentActiveIndex + '\nlength' + endOfArray);
-        // var end = this.endOfArray(currentActiveIndex, endOfArray);
-        // if (end === true) {
-        //     this.resetArray();
-        // }
-        // else {
-
-        // }
-    }
-    activateNextSlide(currentActiveIndex, endOfArray) {
+    activateNextSlide(currentActiveIndex) {
         // if (currentActiveIndex === endOfArray) {
-        //     this.resetArray();
+        //     this.resetArray(); // undefined function
         // }
         // else {
         //     this.setState({
@@ -78,7 +77,7 @@ class Cards extends React.Component {
                 <div className="card left">
                     <img className="avatars" src={items[this.state.leftCard].imgSrc} alt="avatar"></img>
                     <div className="text">
-                        <h3 className="name">Spot {items[this.state.leftCard].name} </h3>
+                        <h3 className="name">{items[this.state.leftCard].name} </h3>
                         <i className="position">{items[this.state.leftCard].position}</i>
                         <p className="testimony">{items[this.state.leftCard].quote}</p>
                     </div>
@@ -91,8 +90,8 @@ class Cards extends React.Component {
                         <i className="position">{items[this.state.activeIndex].position}</i>
                         <p className="testimony">{items[this.state.activeIndex].quote}</p>
                         <div className="arrow-container">
-                            <ArrowLeft className="arrow arrow-left" fill="hsla(221, 0%, 49%, 0.98)" onClick={this.activatePreviousSlide(this.state.activeIndex, this.state.arrayLength)}></ArrowLeft>
-                            <ArrowRight className="arrow arrow-right" fill="hsla(221, 0%, 49%, 0.98)" onClick={this.activateNextSlide(this.state.activeIndex, this.state.arrayLength)}></ArrowRight>
+                            <ArrowLeft className="arrow arrow-left" fill="hsla(221, 0%, 49%, 0.98)" onClick={this.activatePreviousSlide.bind(this, this.state.activeIndex)}></ArrowLeft>
+                            <ArrowRight className="arrow arrow-right" fill="hsla(221, 0%, 49%, 0.98)" onClick={this.activateNextSlide.bind(this, this.state.activeIndex)}></ArrowRight>
                         </div>
                         <Quote className="quotes quote-right" fill="hsla(221, 0%, 88%, 0.81)"> </Quote>
                     </div>
