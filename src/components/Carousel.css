@@ -4,6 +4,7 @@ body {
   text-align: center;
   margin: 0 auto;
   font-family: "Poppins", "sans-serif";
+  background-color: antiquewhite;
 }
 
 .carousel-container {
@@ -18,7 +19,6 @@ body {
 
 .cards {
   display: flex;
-  background-color: antiquewhite;
   width: 100%;
   position: absolute;
 }
