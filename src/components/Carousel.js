@@ -71,6 +71,16 @@ class Carousel extends React.Component {
         })
     }
     render() {
+        var trackerArray = [];
+        for (var i = 0; i < this.state.arrayLength; i++) {
+            if (i === this.state.activeIndex) {
+                trackerArray.push(<Circle fill={activeColour} />);
+            }
+            else {
+                trackerArray.push(<Circle fill={inactiveColour} />);
+            }
+
+        }
         return (
             <div>
                 <div className="cards">
@@ -106,9 +116,7 @@ class Carousel extends React.Component {
                     </div>
                 </div>
                 <div className="tracker">
-                    <Circle fill={inactiveColour}></Circle>
-                    <Circle fill={activeColour}></Circle>
-                    <Circle fill="hsla(221, 0%, 88%, 0.81)"></Circle>
+                    {trackerArray}
                 </div>
             </div>
         )
