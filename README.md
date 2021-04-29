@@ -8,7 +8,6 @@ React component to showcase client/customer testimonials.
 
 - overflow behaviour
 - arrow placement is currently dependent on length of testimonal content
-- CSS on dot tracker placement
 - slow rendering on event trigger
 - turn into npm component
 
