@@ -83,7 +83,7 @@ class Carousel extends React.Component {
         return (
             <div className="carousel-container">
                 <div className="cards">
-                    <div className="card left">
+                    <div className="card leftCard">
                         <img className="avatars" src={items[this.state.leftCard].imgSrc} alt="avatar"></img>
                         <div className="text">
                             <h3 className="name">{items[this.state.leftCard].name} </h3>
@@ -103,7 +103,7 @@ class Carousel extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="card right">
+                    <div className="card rightCard">
                         <img className="avatars" src={items[this.state.rightCard].imgSrc} alt="avatar"></img>
                         <div className="text">
                             <h3 className="name">{items[this.state.rightCard].name}</h3>

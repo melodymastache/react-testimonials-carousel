@@ -8,11 +8,11 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-  .left {
+  .leftCard {
     display: none;
   }
 
-  .right {
+  .rightCard {
     display: none;
   }
 }
@@ -44,12 +44,12 @@ body {
   -webkit-box-shadow: 6px 6px 17px 1px rgba(0, 0, 0, 0.36);
 }
 
-.left {
+.leftCard {
   margin-right: -15em;
   margin-top: 7em;
 }
 
-.right {
+.rightCard {
   margin-left: -15em;
   margin-top: 7em;
 }
@@ -66,17 +66,13 @@ body {
 }
 
 .arrow-container {
-  margin-top: -9.5em;
-  margin-left: -1em;
+  margin-top: -6.5em;
   display: flex;
   justify-content: space-between;
-  width: 106%;
-  border: 2px green solid;
 }
 
 .arrow {
   height: 3em;
-  border: 2px red solid;
 }
 
 .name {
@@ -86,6 +82,7 @@ body {
 
 p {
   padding: 0em 2.5em;
+  overflow: hidden;
 }
 
 .tracker {
