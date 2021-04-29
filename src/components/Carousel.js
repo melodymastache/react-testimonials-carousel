@@ -3,7 +3,6 @@ import './Carousel.css';
 import { items } from './Data';
 import { ReactComponent as ArrowLeft } from '../assets/chevron-left-solid.svg';
 import { ReactComponent as ArrowRight } from '../assets/chevron-right-solid.svg';
-import { ReactComponent as Quote } from '../assets/quote.svg';
 import { ReactComponent as Circle } from '../assets/circle-solid.svg';
 const inactiveColour = 'hsla(221, 0%, 88%, 0.81)';
 const activeColour = 'hsla(221, 0%, 49%, 0.98)';
@@ -74,10 +73,10 @@ class Carousel extends React.Component {
         var trackerArray = [];
         for (var i = 0; i < this.state.arrayLength; i++) {
             if (i === this.state.activeIndex) {
-                trackerArray.push(<Circle fill={activeColour} />);
+                trackerArray.push(<div className='circle'> <Circle fill={activeColour} /> </div>);
             }
             else {
-                trackerArray.push(<Circle fill={inactiveColour} />);
+                trackerArray.push(<div className='circle'> <Circle fill={inactiveColour} /> </div>);
             }
 
         }
@@ -95,7 +94,6 @@ class Carousel extends React.Component {
                     <div className="card active">
                         <img className="avatars" src={items[this.state.activeIndex].imgSrc} alt="avatar"></img>
                         <div className="text">
-                            <Quote className="quotes quote-left" fill="hsla(221, 0%, 88%, 0.81)"></Quote>
                             <h3 className="name">{items[this.state.activeIndex].name}</h3>
                             <i className="position">{items[this.state.activeIndex].position}</i>
                             <p className="testimony">{items[this.state.activeIndex].quote}</p>
@@ -103,7 +101,6 @@ class Carousel extends React.Component {
                                 <ArrowLeft className="arrow arrow-left" fill="hsla(221, 0%, 49%, 0.98)" onClick={this.activatePreviousSlide.bind(this)}></ArrowLeft>
                                 <ArrowRight className="arrow arrow-right" fill="hsla(221, 0%, 49%, 0.98)" onClick={this.activateNextSlide.bind(this)}></ArrowRight>
                             </div>
-                            <Quote className="quotes quote-right" fill="hsla(221, 0%, 88%, 0.81)"> </Quote>
                         </div>
                     </div>
                     <div className="card right">
@@ -118,7 +115,7 @@ class Carousel extends React.Component {
                 <div className="tracker">
                     {trackerArray}
                 </div>
-                <div className="viewAll">View All</div>
+                <a href="#" target="_blank"><button className="viewAll">View All</button></a>
             </div>
         )
     }
