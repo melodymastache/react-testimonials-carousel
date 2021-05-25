@@ -93,15 +93,17 @@ class Carousel extends React.Component {
                     </div>
                     <div className="card active">
                         <img className="avatars" src={items[this.state.activeIndex].imgSrc} alt="avatar"></img>
-                        <div className="text">
-                            <h3 className="name">{items[this.state.activeIndex].name}</h3>
-                            <i className="position">{items[this.state.activeIndex].position}</i>
-                            <p className="testimony">{items[this.state.activeIndex].quote}</p>
+                        <span>
+                            <div className="text">
+                                <h3 className="name">{items[this.state.activeIndex].name}</h3>
+                                <i className="position">{items[this.state.activeIndex].position}</i>
+                                <p className="testimony">{items[this.state.activeIndex].quote}</p>
+                            </div>
                             <div className="arrow-container">
                                 <ArrowLeft className="arrow arrow-left" fill="hsla(221, 0%, 49%, 0.98)" onClick={this.activatePreviousSlide.bind(this)}></ArrowLeft>
                                 <ArrowRight className="arrow arrow-right" fill="hsla(221, 0%, 49%, 0.98)" onClick={this.activateNextSlide.bind(this)}></ArrowRight>
                             </div>
-                        </div>
+                        </span>
                     </div>
                     <div className="card rightCard">
                         <img className="avatars" src={items[this.state.rightCard].imgSrc} alt="avatar"></img>

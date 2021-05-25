@@ -6,9 +6,6 @@ React component to showcase client/customer testimonials.
 
 ## TO FIX
 
-- overflow behaviour
-- flip bottom right quote svg upside down
-- arrow placement is currently dependent on length of testimonal content
 - turn into npm component
 
 ## Scripts
